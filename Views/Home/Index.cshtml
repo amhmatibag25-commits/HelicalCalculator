@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Helical Toroid Frustum Volume</h1>
+    <hr />
+
+    <form action="/Home/Calculate" method="post" style="max-width: 300px; margin: auto; text-align: left;">
+        <div class="form-group">
+            <label>Vertical Height (h):</label>
+            <input type="number" step="any" name="h" class="form-control" required />
+        </div><br />
+        <div class="form-group">
+            <label>Major Radius (R):</label>
+            <input type="number" step="any" name="R" class="form-control" required />
+        </div><br />
+        <div class="form-group">
+            <label>Minor Radius (r):</label>
+            <input type="number" step="any" name="r" class="form-control" required />
+        </div><br />
+        <button type="submit" class="btn btn-primary w-100">Compute Volume</button>
+    </form>
+
+    @if (ViewBag.Result != null)
+    {
+        <div class="alert alert-success mt-4">
+            <h4>Result: @ViewBag.Result cubic units</h4>
+            <small>Inputs: h=@ViewBag.Height, R=@ViewBag.MajorR, r=@ViewBag.MinorR</small>
+        </div>
+    }
+</div>
