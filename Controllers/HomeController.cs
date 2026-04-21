@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using System;
 
 namespace HelicalToroidFrustum.Controllers
