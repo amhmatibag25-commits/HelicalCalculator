@@ -9,7 +9,6 @@ namespace HelicalToroidFrustum.Controllers
             return View();
         }
 
-
         [HttpPost]
         public IActionResult Calculate(double h, double R, double r)
         {
@@ -22,7 +21,5 @@ namespace HelicalToroidFrustum.Controllers
 
             return View("Index");
         }
-
-
     }
 }
